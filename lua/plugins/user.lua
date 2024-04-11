@@ -1,12 +1,19 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
 
 ---@type LazySpec
 return {
 
-  -- == Examples of Adding Plugins ==
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+  },
+
+  {
+    "olimorris/onedarkpro.nvim",
+    priority = 1000,
+  },
 
   "andweeb/presence.nvim",
   {
@@ -40,7 +47,7 @@ return {
   },
 
   -- You can disable default plugins as follows:
-  { "max397574/better-escape.nvim", enabled = false },
+  { "max397574/better-escape.nvim", enabled = true },
 
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   {
