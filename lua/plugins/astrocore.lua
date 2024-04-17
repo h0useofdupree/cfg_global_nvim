@@ -35,6 +35,9 @@ return {
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
+        runner_c_compiler = "gcc",
+        runner_cpp_compiler = "g++",
+        runner_cpp_options = "-std=c++20 -Wall",
       },
     },
     -- Mappings can be configured through AstroCore as well.
@@ -56,6 +59,10 @@ return {
             )
           end,
           desc = "Pick to close",
+        },
+        ["<Leader>dn"] = {
+          "<cmd>NeoRunner<cr>",
+          desc = "NeoRunner",
         },
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
