@@ -15,5 +15,6 @@ vim.filetype.add {
     ["~/%.config/foo/.*"] = "fooscript",
     [".*/hypr/.*%.conf"] = "hyprlang",
     [".*/kitty/.*%.conf"] = "bash",
+    [".*%.ipynb"] = "python",
   },
 }
