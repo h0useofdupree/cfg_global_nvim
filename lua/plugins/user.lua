@@ -3,6 +3,14 @@
 
 ---@type LazySpec
 return {
+  {
+    "lambdalisue/suda.vim",
+  },
+
+  {
+    "BenGH28/neo-runner.nvim",
+    lazy = false,
+  },
 
   {
     "folke/todo-comments.nvim",
