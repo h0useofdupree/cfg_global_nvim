@@ -30,6 +30,7 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
         wrap = true, -- sets vim.opt.wrap
+        conceallevel = 1,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -51,6 +52,9 @@ return {
         L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
+        ["<F11>"] = { "<cmd>!ninja -C build/<CR>", desc = "Build project" },
+        ["<F12>"] = { "<cmd>!./build/main<CR>", desc = "Run binary" },
+
         -- mappings seen under group name "Buffer"
         ["<Leader>bD"] = {
           function()
@@ -64,9 +68,18 @@ return {
           "<cmd>NeoRunner<cr>",
           desc = "NeoRunner",
         },
+        ["<Leader>Pb"] = {
+          "<cmd>!ninja -C build/<CR>",
+          desc = "Build project",
+        },
+        ["<Leader>Pr"] = {
+          "<cmd>!./build/main<CR>",
+          desc = "Run binary",
+        },
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         ["<Leader>b"] = { desc = "Buffers" },
+        ["<Leader>P"] = { desc = "Project" },
         -- quick save
         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
       },

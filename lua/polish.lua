@@ -5,11 +5,11 @@
 -- Set up custom filetypes
 vim.filetype.add {
   extension = {
-    foo = "fooscript",
+    -- foo = "fooscript",
     rasi = "rasi",
   },
   filename = {
-    ["Foofile"] = "fooscript",
+    -- ["Foofile"] = "fooscript",
   },
   pattern = {
     ["~/%.config/foo/.*"] = "fooscript",
@@ -18,3 +18,12 @@ vim.filetype.add {
     [".*%.ipynb"] = "python",
   },
 }
+local ft = require "Comment.ft"
+ft.hyprlang = "#%s"
+
+local notify = vim.notify
+vim.notify = function(msg, ...)
+  if msg:match "warning: multiple different client offset_encodings" then return end
+
+  notify(msg, ...)
+end
