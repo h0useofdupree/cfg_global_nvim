@@ -64,10 +64,6 @@ return {
           end,
           desc = "Pick to close",
         },
-        ["<Leader>dn"] = {
-          "<cmd>NeoRunner<cr>",
-          desc = "NeoRunner",
-        },
         ["<Leader>Pb"] = {
           "<cmd>!ninja -C build/<CR>",
           desc = "Build project",
