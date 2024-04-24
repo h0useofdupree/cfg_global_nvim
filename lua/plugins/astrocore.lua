@@ -53,7 +53,7 @@ return {
         H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
         ["<F11>"] = { "<cmd>!ninja -C build/<CR>", desc = "Build project" },
-        ["<F12>"] = { "split | term ./build/main<CR>", desc = "Run binary" },
+        ["<F12>"] = { "<cmd>split | term ./build/main<CR>", desc = "Run binary" },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bD"] = {

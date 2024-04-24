@@ -10,4 +10,7 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.note-taking.obsidian-nvim" },
+  { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
+  { import = "astrocommunity.recipes.neo-tree-dark" },
+  { import = "astrocommunity.recipes.telescope-nvchad-theme" },
 }
