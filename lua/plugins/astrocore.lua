@@ -64,15 +64,6 @@ return {
         ["<F11>"] = { "<cmd>!make<CR>", desc = "Build project" },
         ["<F12>"] = { "<cmd>split | term ./main<CR>", desc = "Run binary" },
 
-        -- mappings seen under group name "Buffer"
-        ["<Leader>bD"] = {
-          function()
-            require("astroui.status.heirline").buffer_picker(
-              function(bufnr) require("astrocore.buffer").close(bufnr) end
-            )
-          end,
-          desc = "Pick to close",
-        },
         ["<Leader>Pb"] = {
           "<cmd>make<CR>",
           desc = "Build project",
