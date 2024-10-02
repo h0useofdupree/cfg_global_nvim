@@ -34,24 +34,23 @@ return {
     config = function() require("lsp_signature").setup() end,
   },
 
+  ---- Overrides
+  -- Alpha
   {
     "goolord/alpha-nvim",
     opts = function(_, opts)
       -- customize the dashboard header
       opts.section.header.val = {
-
-        " ███    ██ ██    ██ ██ ███    ███     ██████  ██    ██                                                       ",
-        " ████   ██ ██    ██ ██ ████  ████     ██   ██  ██  ██                                                        ",
-        " ██ ██  ██ ██    ██ ██ ██ ████ ██     ██████    ████                                                         ",
-        " ██  ██ ██  ██  ██  ██ ██  ██  ██     ██   ██    ██                                                          ",
-        " ██   ████   ████   ██ ██      ██     ██████     ██                                                          ",
-        "                                                                                                             ",
-        "                                                                                                             ",
-        " ██   ██  ██████  ██    ██ ███████ ███████  ██████  ███████ ██████  ██    ██ ██████  ██████  ███████ ███████ ",
-        " ██   ██ ██  ████ ██    ██ ██      ██      ██    ██ ██      ██   ██ ██    ██ ██   ██ ██   ██ ██      ██      ",
-        " ███████ ██ ██ ██ ██    ██ ███████ █████   ██    ██ █████   ██   ██ ██    ██ ██████  ██████  █████   █████   ",
-        " ██   ██ ████  ██ ██    ██      ██ ██      ██    ██ ██      ██   ██ ██    ██ ██      ██   ██ ██      ██      ",
-        " ██   ██  ██████   ██████  ███████ ███████  ██████  ██      ██████   ██████  ██      ██   ██ ███████ ███████ ",
+        "   b.             8 `8.`888b           ,8'",
+        "   888o.          8  `8.`888b         ,8' ",
+        "   Y88888o.       8   `8.`888b       ,8'  ",
+        "   .`Y888888o.    8    `8.`888b     ,8'   ",
+        "   8o. `Y888888o. 8     `8.`888b   ,8'    ",
+        "   8`Y8o. `Y88888o8      `8.`888b ,8'     ",
+        "   8   `Y8o. `Y8888       `8.`888b8'      ",
+        "   8      `Y8o. `Y8        `8.`888'       ",
+        "   8         `Y8o.`         `8.`8'        ",
+        "   8            `Yo          `8.`         ",
       }
       return opts
     end,
@@ -103,7 +102,7 @@ return {
   },
 
   -- You can disable default plugins as follows:
-  { "max397574/better-escape.nvim", enabled = true },
+  -- { "max397574/better-escape.nvim", enabled = false },
 
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   {
