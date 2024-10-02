@@ -4,18 +4,27 @@
 ---@type LazySpec
 return {
   {
-    "lambdalisue/suda.vim",
+    "lervag/vimtex",
+    lazy = false,
+    -- tag = "v2.15",
+    init = function()
+      vim.g.vimtex_view_method = "zathura"
+      vim.g.vimtex_view_general_options = "--synctex-forward @line:@col:@pdf --synctex-editor-command nvim"
+    end,
   },
+  {
+    "Myzel394/easytables.nvim",
+    ---@diagnostic disable-next-line: missing-parameter
+    config = function() require("easytables").setup() end,
+  },
+  { "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
+
+  { "lambdalisue/suda.vim" },
 
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {},
-  },
-
-  {
-    "olimorris/onedarkpro.nvim",
-    priority = 1000,
   },
 
   "andweeb/presence.nvim",
@@ -25,9 +34,6 @@ return {
     config = function() require("lsp_signature").setup() end,
   },
 
-  -- == Examples of Overriding Plugins ==
-
-  -- customize alpha options
   {
     "goolord/alpha-nvim",
     opts = function(_, opts)
