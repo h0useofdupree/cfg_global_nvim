@@ -12,7 +12,7 @@ vim.filetype.add {
     -- ["Foofile"] = "fooscript",
   },
   pattern = {
-    ["~/%.config/foo/.*"] = "fooscript",
+    -- ["~/%.config/foo/.*"] = "fooscript",
     [".*/hypr/.*%.conf"] = "hyprlang",
     [".*/kitty/.*%.conf"] = "bash",
     [".*%.ipynb"] = "python",
@@ -22,7 +22,7 @@ local ft = require "Comment.ft"
 ft.hyprlang = "#%s"
 
 local notify = vim.notify
-vim.notify = function(msg, ...)
+notify = function(msg, ...)
   if msg:match "warning: multiple different client offset_encodings" then return end
 
   notify(msg, ...)
