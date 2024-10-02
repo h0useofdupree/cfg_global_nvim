@@ -61,8 +61,8 @@ return {
         L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
-        ["<F11>"] = { "<cmd>!ninja -C build/<CR>", desc = "Build project" },
-        ["<F12>"] = { "<cmd>split | term ./build/main<CR>", desc = "Run binary" },
+        ["<F11>"] = { "<cmd>!make<CR>", desc = "Build project" },
+        ["<F12>"] = { "<cmd>split | term ./main<CR>", desc = "Run binary" },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bD"] = {
@@ -74,11 +74,11 @@ return {
           desc = "Pick to close",
         },
         ["<Leader>Pb"] = {
-          "<cmd>!ninja -C build/<CR>",
+          "<cmd>make<CR>",
           desc = "Build project",
         },
         ["<Leader>Pr"] = {
-          "<cmd>!./build/main<CR>",
+          "<cmd>!./main<CR>",
           desc = "Run binary",
         },
         -- tables with just a `desc` key will be registered with which-key if it's installed
