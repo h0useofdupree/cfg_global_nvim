@@ -39,15 +39,6 @@ return {
         runner_c_compiler = "gcc",
         runner_cpp_compiler = "g++",
         runner_cpp_options = "-std=c++20 -Wall",
-
-        neovide_scale_factor = 1.1,
-        neovide_padding_top = 10,
-        neovide_padding_bottom = 10,
-        neovide_padding_left = 10,
-        neovide_padding_right = 10,
-        neovide_scroll_animation_far_lines = 10,
-        neovide_theme = "auto",
-        neovide_cursor_smooth_blink = true,
       },
     },
     -- Mappings can be configured through AstroCore as well.
