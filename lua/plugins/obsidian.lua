@@ -4,6 +4,7 @@ return {
   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand':
   -- event = { "bufreadpre " .. vim.fn.expand "~" .. "/my-vault/**.md" },
   event = { "BufReadPre " .. vim.fn.expand "~" .. "/Documents/obsidian_cloud/**.md" },
+  -- ft = "markdown",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "hrsh7th/nvim-cmp",
@@ -37,6 +38,9 @@ return {
       subdir = "templates",
       date_format = "%Y-%m-%d-%a",
       time_format = "%H:%M",
+    },
+    daily_notes = {
+      folder = "Notes/Daily"
     },
 
     note_frontmatter_func = function(note)
