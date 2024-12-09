@@ -13,6 +13,7 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.nordic-nvim" },
   { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
+  { import = "astrocommunity.colorscheme.rose-pine" },
 
   -- Recipes
   { import = "astrocommunity.recipes.neo-tree-dark" },
