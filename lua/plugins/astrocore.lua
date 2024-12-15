@@ -46,7 +46,11 @@ return {
     mappings = {
       -- first key is the mode
       n = {
-        -- second key is the lefthand side of the map
+        -- TODO: This is really difficult. Make this work!
+        -- ["<Leader>mb"] = { "<cmd>normal! saiwb<CR>", desc = "Bold word under cursor" },
+        -- ["<Leader>mB"] = { "<cmd>normal! sdb<CR>", desc = "Unbold word under cursor" },
+        -- ["<Leader>mi"] = { "<cmd>normal! saiwi<CR>", desc = "Italicize word under cursor" },
+        -- ["<Leader>mI"] = { "<cmd>normal! sdi<CR>", desc = "Unitalicize word under cursor" },
 
         -- navigate buffer tabs with `H` and `L`
         L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
