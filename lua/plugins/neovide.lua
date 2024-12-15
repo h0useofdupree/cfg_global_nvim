@@ -22,7 +22,7 @@ return {
         neovide_cursor_antialiasing = true,
         neovide_cursor_animate_in_insert_mode = true,
         neovide_cursor_animate_command_line = true,
-        neovide_cursor_vfx_mode = "wireframe",
+        neovide_cursor_vfx_mode = "railgun",
       },
     },
   },

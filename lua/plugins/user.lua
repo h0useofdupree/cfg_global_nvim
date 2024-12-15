@@ -4,6 +4,39 @@
 ---@type LazySpec
 return {
   {
+    "bullets-vim/bullets.vim",
+    config = function()
+      vim.g.bullets_enabled_file_types = {
+        -- "markdown",
+        "text",
+        "gitcommit",
+      }
+    end,
+  },
+  {
+    "tadmccorkle/markdown.nvim",
+    ft = "markdown", -- or 'event = "VeryLazy"'
+    opts = {
+      -- configuration here or empty for defaults
+    },
+  },
+  -- {
+  --   "echasnovski/mini.surround",
+  --   version = "*",
+  --   config = function()
+  --     require("mini.surround").setup {
+  --       custom_surroundings = {
+  --         b = {
+  --           output = { left = "**", right = "**" },
+  --         },
+  --         i = {
+  --           output = { left = "*", right = "*" },
+  --         },
+  --       },
+  --     }
+  --   end,
+  -- },
+  {
     "lervag/vimtex",
     lazy = false,
     -- tag = "v2.15",
@@ -54,51 +87,6 @@ return {
       }
       return opts
     end,
-  },
-
-  {
-    "xiyaowong/transparent.nvim",
-    lazy = false,
-    opts = {
-      -- table: default groups
-      groups = {
-        "Normal",
-        "NormalNC",
-        "Comment",
-        "Constant",
-        "Special",
-        "Identifier",
-        "Statement",
-        "PreProc",
-        "Type",
-        "Underlined",
-        "Todo",
-        "String",
-        "Function",
-        "Conditional",
-        "Repeat",
-        "Operator",
-        "Structure",
-        "LineNr",
-        "NonText",
-        "SignColumn",
-        "CursorLineNr",
-        "EndOfBuffer",
-      },
-      -- table: additional groups that should be cleared
-      extra_groups = {
-        "NormalFloat",
-        "NvimTreeNormal",
-        "NeoTreeNormal",
-        "NeoTreeFloatBorder",
-        "NeoTreeNormalNC",
-      },
-      -- table: groups you don't want to clear
-      exclude_groups = {},
-    },
-    keys = {
-      { "<leader>u" .. "T", "<cmd>TransparentToggle<CR>", desc = "Toggle transparency" },
-    },
   },
 
   -- You can disable default plugins as follows:
